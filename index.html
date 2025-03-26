@@ -1,7 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (íconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <style>
+        :root {
+            --primary-color: #0d6efd; /* Color principal (azul de Bootstrap) */
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        /* Tarjetas de Proyectos */
+        .project-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Mi Portafolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero text-center">
+        <div class="container">
+            <img src="https://via.placeholder.com/150" class="rounded-circle mb-4" alt="Foto de perfil">
+            <h1 class="display-4 fw-bold">¡Hola, soy [Tu Nombre]!</h1>
+            <p class="lead">Desarrollador Web | Diseñador UI/UX | Freelancer</p>
+            <a href="#proyectos" class="btn btn-light btn-lg mt-3">Ver mis proyectos</a>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Mis Proyectos</h2>
+            <div class="row">
+                <!-- Proyecto 1 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sitio Web E-commerce</h5>
+                            <p class="card-text">Tienda online desarrollada con React y Node.js.</p>
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                            <a href="#" class="btn btn-outline-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Proyecto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">App de Tareas</h5>
+                            <p class="card-text">Aplicación de gestión de tareas con Firebase.</p>
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                            <a href="#" class="btn btn-outline-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Proyecto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Landing Page Moderna</h5>
+                            <p class="card-text">Diseño responsive con Bootstrap y animaciones CSS.</p>
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                            <a href="#" class="btn btn-outline-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Habilidades</h2>
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="p-3 border rounded">
+                        <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
+                        <h4>HTML5</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-3 border rounded">
+                        <i class="fab fa-css3-alt fa-3x text-primary mb-3"></i>
+                        <h4>CSS3</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-3 border rounded">
+                        <i class="fab fa-js fa-3x text-warning mb-3"></i>
+                        <h4>JavaScript</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-3 border rounded">
+                        <i class="fab fa-bootstrap fa-3x text-purple mb-3"></i>
+                        <h4>Bootstrap</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <div class="mb-3">
+                <a href="#" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
